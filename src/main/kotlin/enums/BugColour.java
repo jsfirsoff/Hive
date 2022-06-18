@@ -1,16 +1,15 @@
 package enums;
 
-import java.util.Arrays;
 import java.util.Random;
 
-public enum TileColour {
+public enum BugColour {
     WHITE, BLACK;
 
-    public static TileColour getRandom() {
+    public static BugColour getRandom() {
         return values()[new Random().nextInt(values().length)];
     }
 
-    public static TileColour getOpposite(TileColour colour) {
+    public static BugColour getOpposite(BugColour colour) {
         if (colour == WHITE) return BLACK;
         return WHITE;
     }
