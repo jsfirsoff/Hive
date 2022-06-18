@@ -1,19 +1,18 @@
 package events;
 
+import enums.TurnStatus;
 import game.GameState;
 import rules.PlacementRule;
 
-import java.util.Map;
+import java.util.List;
 
 public class PlacementRuleListener implements EventListener {
-    Map<GameState, PlacementRule> rules;
+    List<PlacementRule> rules;
 
-    public PlacementRuleListener(GameState state) {
-        this.rules = rules;
-    }
+    public PlacementRuleListener(List<PlacementRule> rules) { this.rules = rules; }
 
     @Override
-    public void update(GameState gameState) {
-
+    public TurnStatus update(GameState gameState) {
+        return null;
     }
 }

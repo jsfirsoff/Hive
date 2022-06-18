@@ -1,10 +1,12 @@
 package rules;
 
+import enums.TurnStatus;
 import game.GameState;
 
 public class EndGameRule implements Rule {
     @Override
-    public boolean validate(GameState state) {
-        return false;
+    public TurnStatus validate(GameState state) {
+        return null;
     }
+    //end game or draw
 }

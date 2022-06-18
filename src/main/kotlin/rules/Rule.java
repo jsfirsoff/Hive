@@ -1,7 +1,8 @@
 package rules;
 
+import enums.TurnStatus;
 import game.GameState;
 
 public interface Rule {
-    boolean validate(GameState state);
+    TurnStatus validate(GameState state);
 }

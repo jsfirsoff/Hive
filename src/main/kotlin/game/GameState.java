@@ -1,17 +1,18 @@
 package game;
 
 import domain.GameBoard;
-import enums.Player;
-import kotlin.random.Random;
+import enums.TileColour;
+import enums.TurnStatus;
+import players.Player;
 
 //An object containing any info needed to make decision/check rules/etc
 public class GameState {
     private GameBoard board;
     private Player currentPlayer;
+    private TurnStatus status;
     private int turn;
     public GameState() {
         this.turn = 1;
-        this.currentPlayer = Player.getRandom();
     }
 
     public GameBoard getBoard() {
@@ -31,5 +32,11 @@ public class GameState {
     }
     public void nextTurn() {
         this.turn = ++turn;
+    }
+    public TurnStatus getStatus() {
+        return status;
+    }
+    public void setStatus(TurnStatus status) {
+        this.status = status;
     }
 }

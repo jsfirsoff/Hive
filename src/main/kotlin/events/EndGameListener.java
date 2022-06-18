@@ -1,19 +1,20 @@
 package events;
 
+import enums.TurnStatus;
 import game.GameState;
 import rules.EndGameRule;
 
-import java.util.Map;
+import java.util.List;
 
 public class EndGameListener implements EventListener {
-    Map<GameState, EndGameRule> rules;
+    List<EndGameRule> rules;
 
-    public EndGameListener(Map<GameState, EndGameRule> rules) {
+    public EndGameListener(List<EndGameRule> rules) {
         this.rules = rules;
     }
 
     @Override
-    public void update(GameState gameState) {
-
+    public TurnStatus update(GameState gameState) {
+        return null;
     }
 }
