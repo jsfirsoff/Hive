@@ -7,4 +7,6 @@ public class MovementRule implements Rule {
     public boolean validate(GameState state) {
         return false;
     }
+
+    //validate if bug being moved belongs to current player
 }

@@ -7,4 +7,5 @@ public class PlacementRule implements Rule {
     public boolean validate(GameState state) {
         return false;
     }
+    //queen bee has to be places on turn 1-4
 }
