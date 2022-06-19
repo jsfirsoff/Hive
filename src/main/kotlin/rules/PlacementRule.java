@@ -1,11 +1,11 @@
 package rules;
 
-import enums.TurnStatus;
+import enums.Event;
 import game.GameState;
 
 public class PlacementRule implements Rule {
     @Override
-    public TurnStatus validate(GameState state) {
+    public Event validate(GameState state) {
         return null;
     }
     //queen bee has to be places on turn 1-4

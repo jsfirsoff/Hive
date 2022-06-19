@@ -1,10 +1,8 @@
 package events;
 
-import enums.TurnStatus;
+import enums.Event;
 import game.GameState;
 
 public interface EventListener {
-    TurnStatus update(GameState gameState);
-
-    //controller-call style instead of gameplay loop?
+    Event update(GameState gameState);
 }

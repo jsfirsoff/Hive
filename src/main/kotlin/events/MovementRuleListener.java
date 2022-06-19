@@ -1,7 +1,7 @@
 package events;
 
 import domain.Bug;
-import enums.TurnStatus;
+import enums.Event;
 import game.GameState;
 import rules.MovementRule;
 
@@ -15,7 +15,7 @@ public class MovementRuleListener implements EventListener {
     }
 
     @Override
-    public TurnStatus update(GameState gameState) {
+    public Event update(GameState gameState) {
         return null;
     }
 }

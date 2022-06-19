@@ -1,6 +1,6 @@
 package events;
 
-import enums.TurnStatus;
+import enums.Event;
 import game.GameState;
 import rules.PlacementRule;
 
@@ -12,7 +12,7 @@ public class PlacementRuleListener implements EventListener {
     public PlacementRuleListener(List<PlacementRule> rules) { this.rules = rules; }
 
     @Override
-    public TurnStatus update(GameState gameState) {
+    public Event update(GameState gameState) {
         return null;
     }
 }

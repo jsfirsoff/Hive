@@ -1,6 +1,6 @@
 package events;
 
-import enums.TurnStatus;
+import enums.Event;
 import game.GameState;
 import rules.EndGameRule;
 
@@ -14,7 +14,7 @@ public class EndGameListener implements EventListener {
     }
 
     @Override
-    public TurnStatus update(GameState gameState) {
+    public Event update(GameState gameState) {
         return null;
     }
 }

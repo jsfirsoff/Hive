@@ -1,6 +1,6 @@
 package game;
 
-import enums.TurnStatus;
+import enums.Event;
 import players.Player;
 
 import java.util.logging.Logger;
@@ -8,17 +8,26 @@ import java.util.logging.Logger;
 public class GamePlay {
     public GamePlay() {}
     public void play(GameState state, Logger logger) {
-        TurnStatus status = null;
+        Event event = state.getEvent();
 
-        while (status != TurnStatus.END_GAME && status != TurnStatus.GAME_DRAW) {
-            status = playerTurn(state, state.getCurrentPlayer());
+        while (event != Event.END_GAME && event != Event.GAME_DRAW) {
+            state = playerTurn(state, state.getEvent(), state.getCurrentPlayer());
+            event = state.getEvent();
+
+
+            //
         }
-        endGame(status);
+        endGame(state);
     }
 
-    private TurnStatus playerTurn(GameState state, Player player) {
+    private GameState playerTurn(GameState state, Event event, Player player) {
 
+        while (event == Event.READY || event == Event.MOVE_FAIL || event == Event.PLACE_FAIL) {
 
+            //prompt player for action
+            //validate
+            //update or retry
+        }
 
 
 
@@ -30,7 +39,7 @@ public class GamePlay {
         return null;
     }
 
-    private void endGame(TurnStatus status) {
+    private void endGame(GameState state) {
 
     }
 }

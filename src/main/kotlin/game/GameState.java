@@ -2,7 +2,6 @@ package game;
 
 import domain.GameBoard;
 import enums.GameType;
-import enums.TurnStatus;
 import players.Player;
 
 //An object containing any info needed to make decision/check rules/etc
@@ -11,12 +10,13 @@ public class GameState {
 
     private Player[] players;
     private Player currentPlayer;
-    private TurnStatus status;
+    private enums.Event currentEvent;
     private int turn;
     private final GameType type;
     public GameState(GameType type) {
         this.turn = 1;
         this.type = type;
+        this.currentEvent = enums.Event.READY;
     }
 
     public GameBoard getBoard() {
@@ -37,11 +37,11 @@ public class GameState {
     public void nextTurn() {
         this.turn = ++turn;
     }
-    public TurnStatus getStatus() {
-        return status;
+    public enums.Event getEvent() {
+        return currentEvent;
     }
-    public void setStatus(TurnStatus status) {
-        this.status = status;
+    public void setEvent(enums.Event status) {
+        this.currentEvent = status;
     }
     public GameType getGameType() { return this.type; }
 
