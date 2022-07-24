@@ -1,9 +1,9 @@
-package game;
+package main.kotlin.game;
 
-import domain.*;
-import enums.GameType;
-import enums.BugColour;
-import players.Player;
+import main.kotlin.domain.*;
+import main.kotlin.enums.GameType;
+import main.kotlin.enums.BugColour;
+import main.kotlin.players.Player;
 
 import java.util.Arrays;
 import java.util.List;

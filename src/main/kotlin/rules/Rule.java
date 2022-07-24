@@ -1,7 +1,8 @@
-package rules;
+package main.kotlin.rules;
 
-import game.GameState;
+import main.kotlin.game.GameState;
+import main.kotlin.enums.Event;
 
 public interface Rule {
-    enums.Event validate(GameState state);
+    Event validate(GameState state);
 }

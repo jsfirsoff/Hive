@@ -1,9 +1,9 @@
-package game;
+package main.kotlin.game;
 
-import enums.Event;
-import players.Player;
+import main.kotlin.enums.Event;
+import main.kotlin.players.Player;
 
-import java.util.logging.Logger;
+import org.slf4j.Logger;
 
 public class GamePlay {
     public GamePlay() {}

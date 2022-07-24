@@ -1,12 +1,13 @@
-package game;
+package main.kotlin.game;
 
-import enums.GameType;
+import main.kotlin.enums.GameType;
 
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GameRunner {
 
-    private static final Logger logger = Logger.getLogger(GameRunner.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(GameRunner.class);
 
     public static void main(String[] args) {
         logger.info("Prompting for type of game...");

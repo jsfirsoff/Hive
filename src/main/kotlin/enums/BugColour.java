@@ -1,4 +1,4 @@
-package enums;
+package main.kotlin.enums;
 
 import java.util.Random;
 

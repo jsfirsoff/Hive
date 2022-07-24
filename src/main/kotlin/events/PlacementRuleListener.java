@@ -1,18 +1,19 @@
-package events;
+package main.kotlin.events;
 
-import enums.Event;
-import game.GameState;
-import rules.PlacementRule;
+import main.kotlin.domain.Tile;
+import main.kotlin.enums.Event;
+import main.kotlin.game.GameState;
+import main.kotlin.rules.PlacementRule;
 
 import java.util.List;
 
 public class PlacementRuleListener implements EventListener {
-    List<PlacementRule> rules;
+    private List<PlacementRule> rules;
 
     public PlacementRuleListener(List<PlacementRule> rules) { this.rules = rules; }
 
     @Override
-    public Event update(GameState gameState) {
+    public Event update(Tile oldTile, Tile newTile, GameState gameState) {
         return null;
     }
 }

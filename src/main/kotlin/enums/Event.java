@@ -1,9 +1,9 @@
-package enums;
+package main.kotlin.enums;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public enum Event {
+public enum Event { //possibly add a second value for importance to use for consolidation
     READY("Waiting for an event."),
     MOVE("Move a tile."),
     PLACE("Place a tile."),

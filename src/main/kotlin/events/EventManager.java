@@ -1,14 +1,20 @@
-package events;
+package main.kotlin.events;
 
-import enums.Event;
-import game.GameState;
+import main.kotlin.domain.Tile;
+import main.kotlin.enums.Event;
+import main.kotlin.game.GameState;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+
 public class EventManager {
     private Map<Event, EventListener> listeners;
+
+    private static final Logger logger = LoggerFactory.getLogger(EventManager.class);
 
     public EventManager() {}
 
@@ -20,17 +26,26 @@ public class EventManager {
         listeners.remove(event, listener);
     }
 
-    public Event notify(Event event, GameState state) {
+    public Event notify(Event event, Tile oldTile, Tile newTile, GameState state) {
         Event currentEvent = state.getEvent();
+
+        logger.info("Validating move for event: {}", currentEvent);
+
         List<Event> eventResults = new ArrayList<>();
         listeners.entrySet().stream()
                 .filter(entry -> entry.getKey().equals(event))
-                .forEach(entry -> eventResults.add(entry.getValue().update(state)));
+                .forEach(entry -> eventResults.add(entry.getValue().update(oldTile, newTile, state)));
 
-        return consolodateEvents(eventResults);
+        return consolidateEvents(eventResults);
     }
 
-    private Event consolodateEvents(List<Event> events) {
-        return null;
+    private Event consolidateEvents(List<Event> events) {
+        logger.info("Consolidating events: {}", events);
+        //endgame > movement > placement
+        Event nextEvent = null;
+
+
+        logger.info("Consolidation complete.  Next event: {}", nextEvent);
+        return nextEvent;
     }
 }

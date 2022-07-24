@@ -1,7 +1,7 @@
-package players;
+package main.kotlin.players;
 
-import domain.Bug;
-import enums.BugColour;
+import main.kotlin.domain.Bug;
+import main.kotlin.enums.BugColour;
 
 import java.util.List;
 

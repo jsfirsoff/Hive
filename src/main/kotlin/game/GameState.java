@@ -1,8 +1,9 @@
-package game;
+package main.kotlin.game;
 
-import domain.GameBoard;
-import enums.GameType;
-import players.Player;
+import main.kotlin.domain.GameBoard;
+import main.kotlin.enums.GameType;
+import main.kotlin.enums.Event;
+import main.kotlin.players.Player;
 
 //An object containing any info needed to make decision/check rules/etc
 public class GameState {
@@ -10,13 +11,13 @@ public class GameState {
 
     private Player[] players;
     private Player currentPlayer;
-    private enums.Event currentEvent;
+    private Event currentEvent;
     private int turn;
     private final GameType type;
     public GameState(GameType type) {
         this.turn = 1;
         this.type = type;
-        this.currentEvent = enums.Event.READY;
+        this.currentEvent = Event.READY;
     }
 
     public GameBoard getBoard() {
@@ -37,10 +38,10 @@ public class GameState {
     public void nextTurn() {
         this.turn = ++turn;
     }
-    public enums.Event getEvent() {
+    public Event getEvent() {
         return currentEvent;
     }
-    public void setEvent(enums.Event status) {
+    public void setEvent(Event status) {
         this.currentEvent = status;
     }
     public GameType getGameType() { return this.type; }

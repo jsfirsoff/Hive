@@ -1,6 +1,6 @@
-package domain;
+package main.kotlin.domain;
 
-import enums.BugColour;
+import main.kotlin.enums.BugColour;
 
 public class Beetle implements Bug {
     private final BugColour colour;

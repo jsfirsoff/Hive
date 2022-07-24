@@ -1,8 +1,8 @@
-package service;
+package main.kotlin.service;
 
-import enums.Event;
-import events.EventManager;
-import events.PlacementRuleListener;
+import main.kotlin.enums.Event;
+import main.kotlin.events.EventManager;
+import main.kotlin.events.PlacementRuleListener;
 
 import java.util.Arrays;
 

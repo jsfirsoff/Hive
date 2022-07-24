@@ -1,4 +1,4 @@
-package domain;
+package main.kotlin.domain;
 
 public class GameBoard {
     private final int ROW_COUNT = 20;
@@ -17,7 +17,21 @@ public class GameBoard {
         }
     }
 
-    public Tile getTile(int row, int col) {
+    private Tile getTile(int row, int col) {
         return tiles[col][row];
+    }
+
+    public Tile getTile(Tile tile) {
+        //odd-r offset ?-->is this even needed with this implementation?
+        // translate coordinates to x, y
+        return getTile(tile.getCoordQ(), tile.getCoordR());
+    }
+
+    private void setTile(int row, int col, Tile tile) {
+        tiles[col][row] = tile;
+    }
+
+    public void updateTile(Tile tile) {
+        setTile(tile.getCoordQ(), tile.getCoordR(), tile); //swap?
     }
 }

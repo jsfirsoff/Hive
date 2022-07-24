@@ -1,10 +1,11 @@
-package rules;
+package main.kotlin.rules;
 
-import game.GameState;
+import main.kotlin.game.GameState;
+import main.kotlin.enums.Event;
 
 public class EndGameRule implements Rule {
     @Override
-    public enums.Event validate(GameState state) {
+    public Event validate(GameState state) {
         return null;
     }
     //end game or draw

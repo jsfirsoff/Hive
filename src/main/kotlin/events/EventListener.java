@@ -1,8 +1,9 @@
-package events;
+package main.kotlin.events;
 
-import enums.Event;
-import game.GameState;
+import main.kotlin.domain.Tile;
+import main.kotlin.enums.Event;
+import main.kotlin.game.GameState;
 
 public interface EventListener {
-    Event update(GameState gameState);
+    Event update(Tile oldTile, Tile newTile, GameState gameState);
 }

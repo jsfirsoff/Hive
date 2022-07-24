@@ -1,7 +1,7 @@
-package rules;
+package main.kotlin.rules;
 
-import enums.Event;
-import game.GameState;
+import main.kotlin.enums.Event;
+import main.kotlin.game.GameState;
 
 public class PlacementRule implements Rule {
     @Override
